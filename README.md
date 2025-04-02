@@ -2,17 +2,12 @@
 
 A modern chat application built with Expo (React Native) that utilizes OpenAI's API with streaming responses. This app demonstrates how to implement real-time chat with GPT models using Expo's fetch streaming capabilities.
 
-<p align="center">
-  <em>Add a screenshot or GIF of your app here</em>
-</p>
-
 ## Features
 
 - [x] Real-time streaming responses from OpenAI's GPT models
 - [x] Clean, intuitive chat interface
 - [x] Secure API key storage using AsyncStorage
-- [ ] Auto-scrolling chat with proper keyboard handling
-- [ ] Loading indicators while waiting for responses
+- [ ] Auto-scrolling chat
 - [x] API key management (add/delete)
 
 ## Technologies Used
@@ -73,7 +68,6 @@ The app uses Expo's implementation of the Fetch API with streaming enabled to co
 1. Your message is displayed in the chat
 2. The app connects to OpenAI's API with streaming enabled
 3. As text chunks arrive, they are parsed and gradually displayed in real-time
-4. The interface automatically scrolls to show new content
 
 ## Code Structure
 
