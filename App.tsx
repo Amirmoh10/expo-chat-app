@@ -1,4 +1,3 @@
-// App.tsx
 import React, { useState, useEffect, useRef } from "react";
 import {
   View,
@@ -74,7 +73,6 @@ const App: React.FC = () => {
   );
 
   const handleDeleteApiKey = async () => {
-    // Show confirmation dialog using React Native's Alert
     Alert.alert(
       "Delete API Key",
       "Are you sure you want to delete your API key?",
@@ -86,13 +84,10 @@ const App: React.FC = () => {
         {
           text: "Delete",
           onPress: async () => {
-            // Clear from storage
             await AsyncStorage.removeItem(API_KEY_STORAGE);
 
-            // Update state
             setApiKey(null);
 
-            // Show the API key input modal
             setModalVisible(true);
           },
           style: "destructive",
@@ -103,7 +98,6 @@ const App: React.FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* Header with reset button */}
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Chat App</Text>
         {apiKey && (
@@ -114,8 +108,6 @@ const App: React.FC = () => {
           />
         )}
       </View>
-
-      {/* API Key Input Modal */}
       <Modal visible={modalVisible} animationType="slide" transparent={true}>
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
@@ -131,8 +123,6 @@ const App: React.FC = () => {
           </View>
         </View>
       </Modal>
-
-      {/* Chat UI */}
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         style={{ flex: 1 }}
