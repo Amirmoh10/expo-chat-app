@@ -7,7 +7,6 @@ A modern chat application built with Expo (React Native) that utilizes OpenAI's 
 - [x] Real-time streaming responses from OpenAI's GPT models
 - [x] Clean, intuitive chat interface
 - [x] Secure API key storage using AsyncStorage
-- [ ] Auto-scrolling chat
 - [x] API key management (add/delete)
 
 ## Technologies Used
